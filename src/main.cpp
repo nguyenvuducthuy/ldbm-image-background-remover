@@ -50,7 +50,7 @@ string type2str(int type) {
 Mat cutoutImg(Mat input, cv::Mat mask, double lamda)
 {
     Mat input_bgra;
-    cv::cvtColor(input, input_bgra, CV_BGR2BGRA);
+    cv::cvtColor(input, input_bgra, COLOR_BGR2BGRA);
     for (int y = 0; y < mask.rows; ++y){
         for (int x = 0; x < mask.cols; ++x){
             cv::Vec4b & pixel = input_bgra.at<cv::Vec4b>(y, x);
